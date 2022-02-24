@@ -1,27 +1,26 @@
-# Rcf
+# Royal Crest Farm
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
+This repo house the minimum viable product for the proprietors of the farm who are looking to replace their manual sales and CSA member processes with a web-based app.
 
-## Development server
+## Platforms, tools, libraries, and frameworks
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+RCF is written using the following:
 
-## Code scaffolding
+- Angular v13.x
+- Tailwind CSS
+- Netlify
+- Supabase (future release)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Current release
 
-## Build
+The MVP is focused on replacing their existing Wordpress.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Planned features and enhancements
 
-## Running unit tests
+Below is a list of a few of the features that will be rolled out in future releases:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- CSA member sign-up and user management features
+- Product listing, ordering, and payment capabilities
 
-## Running end-to-end tests
+![F7 Logo](http://frinkiac-7.net/images/f7-pos.png "F7 logo")
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
