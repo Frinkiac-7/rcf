@@ -1,6 +1,128 @@
-<div class="flex flex-row text-center justify-center gap-x-5 p-1 text-black">
-	<!-- Desktop navbar layout -->
-	<a class="w-1/3 bg-slate-200 text-center rounded-lg p-1" href="">Why Royal Crest Farm?</a>
-	<a class="w-1/3 bg-red-200 text-center rounded-lg p-1" href="">Beef, Pork, Turkey, & Chicken</a>
-	<a class="w-1/3 bg-green-200 text-center rounded-lg p-1" href="">Landscaping Supplies</a>
-</div>
+<nav class="bg-rcf-green shadow lg:block hidden">
+	<div class="mx-auto container px-6 py-2 xl:py-0">
+		<div class="flex items-center justify-between">
+			<div class="flex justify-between items-center">
+				<img src="../../../assets/images/cropped-rcf-icon.png" alt="" height="90" width="100">
+			</div>
+			<div class="flex">
+				<div class="hidden lg:flex md:mr-6 xl:mr-16">
+					<div class="p-2">
+						<a routerLink="/" routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}" class="flex items-center p-3 text-gray-50 hover:bg-gray-800 transition duration-150 ease-in-out">Home</a>
+					</div>
+					<div class="p-2">
+						<a routerLink="/csa" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="flex items-center p-3 text-gray-50 hover:bg-gray-800 transition duration-150 ease-in-out">CSA</a>
+					</div>
+					<div class="p-2">
+						<a routerLink="/livestock" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="flex items-center p-3 text-gray-50 hover:bg-gray-800 transition duration-150 ease-in-out">Livestock</a>
+					</div>
+					<div class="p-2">
+						<a routerLink="/landscaping" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="flex items-center p-3 text-gray-50 hover:bg-gray-800 transition duration-150 ease-in-out">Landscaping</a>
+					</div>
+					<div class="p-2">
+						<a routerLink="/join" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="flex items-center p-3 text-gray-50 hover:bg-gray-800 transition duration-150 ease-in-out">Join</a>
+					</div>
+					<div class="p-2">
+						<a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="flex items-center p-3 text-gray-50 hover:bg-gray-800 transition duration-150 ease-in-out">Contact</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<nav>
+	<div class="p-2 px-6 w-full flex lg:hidden justify-between items-center bg-rcf-green top-0 z-40">
+		<div class="flex justify-between items-center">
+			<img src="../../../assets/images/cropped-rcf-icon.png" alt="" height="90" width="100">
+		</div>
+		<div class="flex items-center">
+			<!-- Hamburger icon -->
+			<div id="menu" class="text-gray-50" (click)="isMenu=true">
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24"
+					viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+					stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					<line x1="4" y1="6" x2="20" y2="6" />
+					<line x1="4" y1="12" x2="20" y2="12" />
+					<line x1="4" y1="18" x2="20" y2="18" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<!--Mobile responsive sidebar-->
+	<div *ngIf="isMenu" class="absolute w-full h-full z-40 xl:hidden" id="mobile-nav">
+		<div class="bg-gray-800 opacity-50 w-full h-full mt-4" (click)="isMenu=false"></div>
+		<div
+			class="w-64 fixed overflow-y-auto z-40 top-0 bg-rcf-green shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
+			<div class="px-6 h-full">
+				<div class="flex flex-col justify-between h-full w-full">
+					<div>
+						<div class="flex justify-between items-center pt-2">
+							<img src="../../../assets/images/cropped-rcf-icon.png" alt="" height="90" width="100">
+							<div id="cross" class="bg-red-900 text-white rounded-2xl" (click)="isMenu=false">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24"
+									viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+									stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z"></path>
+									<line x1="18" y1="6" x2="6" y2="18"></line>
+									<line x1="6" y1="6" x2="18" y2="18"></line>
+								</svg>
+							</div>
+						</div>
+						<ul>
+							<a class="cursor-pointer">
+								<li class="text-gray-50 pt-10">
+									<div class="flex items-center">
+										<a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="isMenu=false"
+											class="p-2">Home</a>
+									</div>
+								</li>
+							</a>
+							<a class="cursor-pointer">
+								<li class="text-gray-50 pt-10">
+									<div class="flex items-center justify-between">
+										<a routerLink="/csa" routerLinkActive="active" (click)="isMenu=false"
+											class="p-2">CSA</a>
+									</div>
+								</li>
+							</a>
+							<a class="cursor-pointer">
+								<li class="text-gray-50 pt-10">
+									<div class="flex items-center justify-between">
+										<div class="flex items-center">
+											<a routerLink="/livestock" routerLinkActive="active" (click)="isMenu=false"
+												class="p-2">Livestock</a>
+										</div>
+									</div>
+								</li>
+							</a>
+							<a class="cursor-pointer">
+								<li class="text-gray-50 pt-10">
+									<div class="flex items-center">
+										<a routerLink="/landscaping" routerLinkActive="active" (click)="isMenu=false"
+											class="p-2">Landscaping</a>
+									</div>
+								</li>
+							</a>
+							<a class="cursor-pointer">
+								<li class="text-gray-50 pt-10">
+									<div class="flex items-center">
+										<a routerLink="/join" routerLinkActive="active" (click)="isMenu=false"
+											class="p-2">Join</a>
+									</div>
+								</li>
+							</a>
+							<a class="cursor-pointer">
+								<li class="text-gray-50 pt-10">
+									<div class="flex items-center">
+										<a routerLink="/contact" routerLinkActive="active" (click)="isMenu=false"
+											class="p-2">Contact</a>
+									</div>
+								</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

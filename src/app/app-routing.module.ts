@@ -1,3 +1,5 @@
+import { JoinComponent } from './pages/join/join.component';
+import { NotfoundComponent } from './shared/notfound/notfound.component';
 import { LandscapingComponent } from './pages/landscaping/landscaping.component';
 import { LivestockComponent } from './pages/livestock/livestock.component';
 import { CsaComponent } from './pages/csa/csa.component';
@@ -25,8 +27,20 @@ const routes: Routes = [
 		component: LandscapingComponent
 	},
 	{
+		path: 'join',
+		component: JoinComponent
+	},
+	{
 		path: 'contact',
 		component: ContactComponent
+	},
+	{
+		path: '404',
+		component: NotfoundComponent
+	},
+	{
+		path: '**',
+		redirectTo: '/404'
 	}
 ];
 

@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+	@apply bg-rcf-indigo-dye text-gray-50;
+	overflow: scroll;
+}

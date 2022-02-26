@@ -11,6 +11,8 @@ import { BannerComponent } from './shared/banner/banner.component';
 import { CsaComponent } from './pages/csa/csa.component';
 import { LivestockComponent } from './pages/livestock/livestock.component';
 import { LandscapingComponent } from './pages/landscaping/landscaping.component';
+import { NotfoundComponent } from './shared/notfound/notfound.component';
+import { JoinComponent } from './pages/join/join.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LandscapingComponent } from './pages/landscaping/landscaping.component'
     BannerComponent,
     CsaComponent,
     LivestockComponent,
-    LandscapingComponent
+    LandscapingComponent,
+    NotfoundComponent,
+    JoinComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+/* CSS-only menu toggle for responsive navbar */
+#menu-toggle:checked + #menu {
+	display: block;
+}
+
+.active {
+	@apply bg-rcf-ash-gray text-gray-900 rounded-lg;
+}
